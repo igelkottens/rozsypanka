@@ -1,4 +1,3 @@
-// Polski alfabet
 const polishAlphabet = "aąbcćdeęfghijklłmnńoóprsśtuwyzźż".split("");
 
 let level = 1;
@@ -11,7 +10,9 @@ const levelTitle = document.getElementById("levelTitle");
 const feedbackBox = document.getElementById("feedbackBox");
 const message = document.getElementById("message");
 const nextBtn = document.getElementById("nextBtn");
+const checkBtn = document.getElementById("checkBtn");
 
+// Drag&Drop
 new Sortable(leftCol, { group: "words", animation: 150 });
 new Sortable(rightCol, { group: "words", animation: 150 });
 
@@ -39,10 +40,7 @@ function generateLevel() {
   nextBtn.style.display = "none";
 
   leftCol.innerHTML = "";
-  rightCol.innerHTML = "<button id='checkBtn' style='margin-top:1rem; width:100%'>Gotowe</button>";
-
-  const checkBtn = document.getElementById("checkBtn");
-  checkBtn.addEventListener("click", checkAnswer);
+  rightCol.innerHTML = "";
 
   const wordsCount = 5 + level;
   let selected = [];
@@ -62,7 +60,7 @@ function generateLevel() {
   generateLevel.correctOrder = [...selected].sort(compareWords);
 }
 
-function checkAnswer() {
+checkBtn.addEventListener("click", () => {
   const chosen = Array.from(rightCol.querySelectorAll(".word")).map(el => el.textContent);
 
   if (chosen.length !== generateLevel.correctOrder.length) {
@@ -85,7 +83,7 @@ function checkAnswer() {
     }
     showFeedback("Błąd", "error", false);
   }
-}
+});
 
 function showFeedback(text, type, success) {
   feedbackBox.className = "feedback " + type;
