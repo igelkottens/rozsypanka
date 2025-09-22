@@ -64,15 +64,18 @@
     </ul>
   </nav>
 
-  <main class="container">
+<main class="container">
   <h2 id="levelTitle">Poziom 1</h2>
   <p>Przenieś słowa z lewej kolumny do prawej i ułóż je w porządku alfabetycznym wg polskiego alfabetu.</p>
 
   <div class="columns">
     <div class="column" id="leftColumn"></div>
-    <div class="column" id="rightColumn">
-      <button id="checkBtn" style="margin-top:1rem; width:100%">Gotowe</button>
-    </div>
+    <div class="column" id="rightColumn"></div>
+  </div>
+
+  <!-- przycisk już na stałe, pod prawą kolumną -->
+  <div style="text-align:right; margin-top:1rem;">
+    <button id="checkBtn">Gotowe</button>
   </div>
 
   <div id="feedbackBox" class="feedback">
