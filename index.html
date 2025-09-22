@@ -1,97 +1,36 @@
-
-
-
-
-
-
 <!DOCTYPE html>
 <html lang="pl">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Gra w sortowanie słów</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
-  <style>
-    .columns {
-      display: flex;
-      gap: 2rem;
-      flex-wrap: wrap;
-    }
-    .column {
-      flex: 1;
-      min-width: 280px;
-      border: 1px solid #ddd;
-      padding: 1rem;
-      border-radius: 8px;
-      background: #f9f9f9;
-      min-height: 300px;
-    }
-    .word {
-      padding: 0.4rem 0.8rem;
-      margin: 0.3rem 0;
-      background: #fff;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-      cursor: grab;
-    }
-    .feedback {
-      padding: 1rem;
-      margin-top: 1rem;
-      border-radius: 8px;
-      text-align: center;
-      font-weight: bold;
-      display: none;
-    }
-    .feedback.success {
-      background: #d4edda;
-      color: #155724;
-      border: 1px solid #c3e6cb;
-    }
-    .feedback.error {
-      background: #f8d7da;
-      color: #721c24;
-      border: 1px solid #f5c6cb;
-    }
-  </style>
+  <title>Gra: Sortowanie słów</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.0/Sortable.min.js"></script>
+  <script defer src="words.js"></script>
+  <script defer src="game.js"></script>
 </head>
 <body>
-  <nav class="container-fluid">
-    <ul>
-      <li><strong>Sortowanie słów</strong></li>
-    </ul>
-    <ul>
-      <li><a href="#" id="resetScore">Resetuj wynik</a></li>
-    </ul>
-  </nav>
+  <main class="container">
+    <h2 id="levelTitle">Poziom 1</h2>
+    <p>Przenieś słowa z lewej kolumny do prawej i ułóż je w porządku alfabetycznym wg polskiego alfabetu.</p>
 
-<main class="container">
-  <h2 id="levelTitle">Poziom 1</h2>
-  <p>Przenieś słowa z lewej kolumny do prawej i ułóż je w porządku alfabetycznym wg polskiego alfabetu.</p>
+    <div class="columns">
+      <div class="column box" id="leftColumn"></div>
+      <div class="column box">
+        <div id="rightColumn"></div>
+        <button id="checkBtn" class="primary">Gotowe</button>
+      </div>
+    </div>
 
-  <div class="columns">
-    <div class="column" id="leftColumn"></div>
-    <div class="column" id="rightColumn"></div>
-  </div>
+    <div id="feedbackBox" class="feedback">
+      <p id="message"></p>
+      <button id="nextBtn"></button>
+    </div>
 
-  <!-- przycisk już na stałe, pod prawą kolumną -->
-  <div style="text-align:right; margin-top:1rem;">
-    <button id="checkBtn">Gotowe</button>
-  </div>
-
-  <div id="feedbackBox" class="feedback">
-    <p id="message"></p>
-    <button id="nextBtn" style="display:none"></button>
-  </div>
-
-  <p id="highScoreBox">Twój najlepszy wynik to Poziom <span id="highScore">0</span></p>
-</main>
-
-  <footer class="container">
-    <small><a href="#">Gra edukacyjna</a> • <a href="#">Polski alfabet</a></small>
-  </footer>
-
-  <script src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.0/Sortable.min.js"></script>
-  <script src="words.js"></script>
-  <script src="game.js"></script>
+    <p id="highScoreBox" class="small">
+      Twój najlepszy wynik to Poziom <span id="highScore">0</span>
+      • <a href="#" id="resetScore">Resetuj wynik</a>
+    </p>
+  </main>
 </body>
 </html>
