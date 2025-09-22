@@ -97,7 +97,7 @@ const words = [
 "ogon","ogród","ogromny","okazja","okładka","okręt","okres","okruch","okrycie","okruszek",
 
 // Ó (rzadkie na początku, ale zostawiam kilka przykładów)
-"ów","ósemka","ósemnasty","ósemkowy","ówczesny","ówdzie","óleń","ółek","ół","ózarów",
+"ów","ósemka", "ósemkowy","ówczesny","ówdzie",
 
 // P
 "pies","piesek","pieszy","ptak","pociąg","pokój","powód","powóz","powieść","powietrze",
