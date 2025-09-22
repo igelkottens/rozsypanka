@@ -28,8 +28,23 @@
       border-radius: 5px;
       cursor: grab;
     }
-    .highlight {
-      border: 2px dashed #666;
+    .feedback {
+      padding: 1rem;
+      margin-top: 1rem;
+      border-radius: 8px;
+      text-align: center;
+      font-weight: bold;
+      display: none;
+    }
+    .feedback.success {
+      background: #d4edda;
+      color: #155724;
+      border: 1px solid #c3e6cb;
+    }
+    .feedback.error {
+      background: #f8d7da;
+      color: #721c24;
+      border: 1px solid #f5c6cb;
     }
   </style>
 </head>
@@ -39,7 +54,6 @@
       <li><strong>Sortowanie słów</strong></li>
     </ul>
     <ul>
-      <li><a href="#">Instrukcja</a></li>
       <li><a href="#" id="resetScore">Resetuj wynik</a></li>
     </ul>
   </nav>
@@ -54,19 +68,21 @@
     </div>
 
     <button id="checkBtn">Gotowe!</button>
-    <p id="message"></p>
-    <p>Najlepszy wynik: <span id="highScore">0</span></p>
+
+    <div id="feedbackBox" class="feedback">
+      <p id="message"></p>
+      <button id="nextBtn" style="display:none"></button>
+    </div>
+
+    <p id="highScoreBox">Twój najlepszy wynik to Poziom <span id="highScore">0</span></p>
   </main>
 
   <footer class="container">
     <small><a href="#">Gra edukacyjna</a> • <a href="#">Polski alfabet</a></small>
   </footer>
 
-  <!-- biblioteka SortableJS -->
   <script src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.0/Sortable.min.js"></script>
-  <!-- baza słów -->
   <script src="words.js"></script>
-  <!-- logika gry -->
   <script src="game.js"></script>
 </body>
 </html>
