@@ -1,3 +1,9 @@
+
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="pl">
 <head>
@@ -59,23 +65,23 @@
   </nav>
 
   <main class="container">
-    <h2 id="levelTitle">Poziom 1</h2>
-    <p>Przenieś słowa z lewej kolumny do prawej i ułóż je w porządku alfabetycznym wg polskiego alfabetu.</p>
+  <h2 id="levelTitle">Poziom 1</h2>
+  <p>Przenieś słowa z lewej kolumny do prawej i ułóż je w porządku alfabetycznym wg polskiego alfabetu.</p>
 
-    <div class="columns">
-      <div class="column" id="leftColumn"></div>
-      <div class="column" id="rightColumn"></div>
+  <div class="columns">
+    <div class="column" id="leftColumn"></div>
+    <div class="column" id="rightColumn">
+      <button id="checkBtn" style="margin-top:1rem; width:100%">Gotowe</button>
     </div>
+  </div>
 
-    <button id="checkBtn">Gotowe!</button>
+  <div id="feedbackBox" class="feedback">
+    <p id="message"></p>
+    <button id="nextBtn" style="display:none"></button>
+  </div>
 
-    <div id="feedbackBox" class="feedback">
-      <p id="message"></p>
-      <button id="nextBtn" style="display:none"></button>
-    </div>
-
-    <p id="highScoreBox">Twój najlepszy wynik to Poziom <span id="highScore">0</span></p>
-  </main>
+  <p id="highScoreBox">Twój najlepszy wynik to Poziom <span id="highScore">0</span></p>
+</main>
 
   <footer class="container">
     <small><a href="#">Gra edukacyjna</a> • <a href="#">Polski alfabet</a></small>
