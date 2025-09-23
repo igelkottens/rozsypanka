@@ -41,6 +41,7 @@ function generateLevel() {
 
   leftCol.innerHTML = "";
   rightCol.innerHTML = "";
+  rightCol.classList.add("empty"); // początkowo pusta
 
   const wordsCount = 5 + level;
   let selected = [];
@@ -59,6 +60,16 @@ function generateLevel() {
 
   generateLevel.correctOrder = [...selected].sort(compareWords);
 }
+
+// obsługa stanu pustej drop-zony
+const observer = new MutationObserver(() => {
+  if (rightCol.querySelector(".word")) {
+    rightCol.classList.remove("empty");
+  } else {
+    rightCol.classList.add("empty");
+  }
+});
+observer.observe(rightCol, { childList: true });
 
 checkBtn.addEventListener("click", () => {
   const chosen = Array.from(rightCol.querySelectorAll(".word")).map(el => el.textContent);
