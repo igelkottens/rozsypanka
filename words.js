@@ -73,8 +73,8 @@ const words = [
 
 // Ł
 "łabędź","łóżko","łuk","łódź","łapa","łopatka","łódka","łania","łan","łata",
-"łagodny","łamać","łaskawy","łatać","łomot","łowić","łuska","łyska","łobuz","łaska",
-"łazienka","ładować","ładowarka","łakomy","łaskotać","łazić","łaskota","łacina","łagier","łotr",
+"łagodny","łamać","łaskawy","łatać","łomot","łowić","łuska","łobuz","łaska",
+"łazienka","ładować","ładowarka","łakomy","łaskotać","łazić","łacina","łagier","łotr",
 
 // M
 "mak","mama","miasto","most","mysz","miód","młody","moc","morze","mapa",
@@ -151,11 +151,11 @@ const words = [
 "zdanie","zdarzenie","zdjęcie","zdobycz","zdobyć","zdolny","zdrowie","zdrowy","zdumienie","zegar",
 
 // Ź (na początku bardzo rzadko, ale kilka damy)
-"źrebak","źródło","źdźbło","źrenica","źle","źleć","źródełko","źródłowy","źdźbło trawy","źródłowość",
+"źrebak","źródło","źdźbło","źrenica","źle","źródełko","źródłowy",
 
 // Ż
 "żaba","żółty","żar","żart","żołnierz","żagiel","żarówka","żuraw","żona","żarcie",
 "żmija","żeton","żmudny","żubr","żelazo","żebra","żołądek","żniwo","żarliwy","żeglować",
-"żniwiarz","żetonowy","żongler","żonglować","żółw","żółwica","żartobliwy","żarliwie","żak","żakiet",
+"żniwiarz","żetonowy","żongler","żonglować","żółw","żartobliwy","żarliwie","żak","żakiet",
 ];
 
